@@ -9,6 +9,7 @@ categories: Java
 #标签配置
 tag: 学习笔记
 ---
+Java中的String与StringBuilder
 
 * content
 {:toc}
@@ -29,13 +30,13 @@ public char charAt(int Index)                                                   
 
 public char[] to Array()           															//将字符串拆分为字符数组后返回
 
-public String substring(int beginIndex,int endIdex)                     //根据开头和结束索引进行截取，得到新                              的字符串（包含头，不包含尾）                       
+public String substring(int beginIndex,int endIdex)                     //根据开头和结束索引进行截取，得到新                              的字符串（包含头，不包含尾）
 
 public String substring(int beginIndex)                                          //从传入的索引处截取，截取到末尾，得到新的字符串
 
 public String replace(CharSequence target,CharSequence replacement)   //使用新值，将字符串中的旧值替换，得到新的字符串
 
-public String[] split(String regex)                                                   //根据传入的规则切割字符串，得到字符串数组      
+public String[] split(String regex)                                                   //根据传入的规则切割字符串，得到字符串数组
 ```
 
 ## 二.StringBuilder
