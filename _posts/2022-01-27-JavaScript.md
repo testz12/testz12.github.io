@@ -9,6 +9,7 @@ categories: JavaWeb
 #标签配置
 tag: 学习笔记
 ---
+JavaScript
 
 * content
 {:toc}
@@ -27,7 +28,7 @@ tag: 学习笔记
 
 ```tex
 1995 年，NetScape (网景)公司，开发的一门客户端脚本语言：LiveScript。后来，请来 SUN 公司的专家来 进行修改，后命名为：JavaScript。
-1996 年，微软抄袭 JavaScript 开发出 JScript 脚本语言。 
+1996 年，微软抄袭 JavaScript 开发出 JScript 脚本语言。
 1997 年，ECMA (欧洲计算机制造商协会)，制定出客户端脚本语言的标准：ECMAScript，统一了所有客户 端脚本语言的编码方式。
 ```
 
@@ -127,15 +128,15 @@ tag: 学习笔记
 ### 2.输入输出语句
 
 - 输入框 prompt(“提示内容”);
-- 弹出警告框 alert(“提示内容”); 
-- 控制台输出 console.log(“显示内容”); 
+- 弹出警告框 alert(“提示内容”);
+- 控制台输出 console.log(“显示内容”);
 - 页面内容输出 document.write(“显示内容”);
 
 ### 3.变量和常量
 
 ​	JavaScript 属于弱类型的语言，定义变量时不区分具体的数据类型。
 
-- 定义局部变量 let 变量名 = 值; 
+- 定义局部变量 let 变量名 = 值;
 
   ```js
   //1.定义局部变量
@@ -144,7 +145,7 @@ tag: 学习笔记
   document.write(name + "," + age +"<br>");
   ```
 
-- 定义全局变量 变量名 = 值; 
+- 定义全局变量 变量名 = 值;
 
   ```js
   //2.定义全局变量
@@ -183,7 +184,7 @@ tag: 学习笔记
 **typeof 用于判断变量的数据类型**
 
 ```js
-let age = 18; 
+let age = 18;
 document.write(typeof(age)); // number
 ```
 
@@ -224,7 +225,7 @@ document.write(typeof(age)); // number
   | <=     | 小于等于                 |
   | !=     | 不等于                   |
 
-  
+
 
 - 逻辑运算符
 
@@ -238,7 +239,7 @@ document.write(typeof(age)); // number
 
   - 三元运算符格式
 
-    (比较表达式) ? 表达式1 : 表达式2; 
+    (比较表达式) ? 表达式1 : 表达式2;
 
   - 执行流程
 
@@ -264,7 +265,7 @@ document.write(typeof(age)); // number
   }else {
       document.write("月份有误");
   }
-  
+
   document.write("<br>");
   ```
 
@@ -297,7 +298,7 @@ document.write(typeof(age)); // number
           document.write("月份有误");
           break;
   }
-  
+
   document.write("<br>");**for 循环**
   ```
 
@@ -337,7 +338,7 @@ document.write(typeof(age)); // number
 
   - 从 0 开始，最大到数组长度-1
 
-- 数组长度 
+- 数组长度
 
   - 数组名.length
 
@@ -348,7 +349,7 @@ document.write(typeof(age)); // number
     document.write("==============<br>");
     ```
 
-- 数组高级运算符… 
+- 数组高级运算符…
 
   - 数组复制
 
@@ -386,7 +387,7 @@ document.write(typeof(age)); // number
     }
     ```
 
-    
+
 
 ### 8.函数
 
@@ -396,8 +397,8 @@ document.write(typeof(age)); // number
 
   ```js
   function 方法名(参数列表) {
-      方法体; 
-      return 返回值; 
+      方法体;
+      return 返回值;
   }
   ```
 
@@ -405,18 +406,18 @@ document.write(typeof(age)); // number
 
   ```js
   function 方法名(…参数名) {
-      方法体; 
-      return 返回值; 
+      方法体;
+      return 返回值;
   }
   ```
 
-  
+
 
 - 匿名函数
 
   ```js
   function(参数列表) {
-      方法体; 
+      方法体;
   }
   ```
 
@@ -424,10 +425,10 @@ document.write(typeof(age)); // number
 
 - 注释：单行// 多行/**/
 - 输入输出语句：prompt()、alert()、console.log()、document.write()
-- 变量和常量：let、const 
+- 变量和常量：let、const
 - 数据类型：boolean、null、undefined、number、string、bigint
-- typeof 关键字：用于判断变量的数据类型 
-- 运算符：算数、赋值、逻辑、比较、三元运算符 
+- typeof 关键字：用于判断变量的数据类型
+- 运算符：算数、赋值、逻辑、比较、三元运算符
 - 流程控制和循环语句：if、switch、for、while
 - 数组：数据类型和长度没有限制，let 数组名 = [长度/元素]
 - 函数：类似方法，抽取代码，提高复用性
@@ -532,19 +533,19 @@ document.write(typeof(age)); // number
       let option = document.createElement("option");
       //为option添加文本内容
       option.innerText = "深圳";
-  
+
       //2. appendChild()     将子元素添加到父元素中
       let select = document.getElementById("s");
       select.appendChild(option);
-  
+
       //3. removeChild()     通过父元素删除子元素
       //select.removeChild(option);
-  
+
       //4. replaceChild()    用新元素替换老元素
       let option2 = document.createElement("option");
       option2.innerText = "杭州";
       select.replaceChild(option2,option);
-  
+
   </script>
   </html>
   ```
@@ -582,20 +583,20 @@ document.write(typeof(age)); // number
       //1. setAttribute()    添加属性
       let a = document.getElementsByTagName("a")[0];
       a.setAttribute("href","https://www.baidu.com");
-  
+
       //2. getAttribute()    获取属性
       let value = a.getAttribute("href");
       //alert(value);
-  
+
       //3. removeAttribute()  删除属性
       //a.removeAttribute("href");
-  
+
       //4. style属性   添加样式
       //a.style.color = "red";
-  
+
       //5. className属性   添加指定样式
       a.className = "aColor";
-  
+
   </script>
   </html>
   ```
@@ -627,17 +628,17 @@ document.write(typeof(age)); // number
       let div = document.getElementById("div");
       div.innerText = "我是div";
       //div.innerText = "<b>我是div</b>";
-  
+
       //2. innerHTML   添加文本内容，解析标签
       div.innerHTML = "<b>我是div</b>";
-  
+
   </script>
   </html>
   ```
 
 ### 6.DOM小结
 
-- DOM(Document Object Model)：文档对象模型 
+- DOM(Document Object Model)：文档对象模型
 
   - Document：文档对象
 - Element：元素对象
@@ -892,7 +893,7 @@ table.removeChild(tr);
       constructor(变量列表) {
           变量赋值;
       }
-      
+
       方法名(参数列表) {
           方法体;
           return 返回值;
@@ -900,7 +901,7 @@ table.removeChild(tr);
   }
   ```
 
-  
+
 
 + **使用格式**
 
@@ -909,7 +910,7 @@ table.removeChild(tr);
   对象名.方法名();
   ```
 
-  
+
 
 - **代码实现**
 
@@ -922,7 +923,7 @@ table.removeChild(tr);
       <title>类的定义和使用</title>
   </head>
   <body>
-      
+
   </body>
   <script>
       //定义Person类
@@ -932,18 +933,18 @@ table.removeChild(tr);
               this.name = name;
               this.age = age;
           }
-  
+
           //show方法
           show(){
               document.write(this.name + "," + this.age + "<br>");
           }
-  
+
           //eat方法
           eat(){
               document.write("吃饭...");
           }
       }
-  
+
       //使用Person类
       let p = new Person("张三",23);
       p.show();
@@ -969,7 +970,7 @@ table.removeChild(tr);
   };
   ```
 
-  
+
 
 + **使用格式**
 
@@ -989,7 +990,7 @@ table.removeChild(tr);
       <title>字面量定义类和使用</title>
   </head>
   <body>
-      
+
   </body>
   <script>
       //定义person
@@ -997,12 +998,12 @@ table.removeChild(tr);
           name : "张三",
           age : 23,
           hobby : ["听课","学习"],
-  
+
           eat : function() {
               document.write("吃饭...");
           }
       };
-  
+
       //使用person
       document.write(person.name + "," + person.age + "," + person.hobby[0] + "," + person.hobby[1] + "<br>");
       person.eat();
@@ -1027,7 +1028,7 @@ table.removeChild(tr);
       <title>继承</title>
   </head>
   <body>
-      
+
   </body>
   <script>
       //定义Person类
@@ -1037,25 +1038,25 @@ table.removeChild(tr);
               this.name = name;
               this.age = age;
           }
-  
+
           //eat方法
           eat(){
               document.write("吃饭...");
           }
       }
-  
+
       //定义Worker类继承Person
       class Worker extends Person{
           constructor(name,age,salary){
               super(name,age);
               this.salary = salary;
           }
-  
+
           show(){
               document.write(this.name + "," + this.age + "," + this.salary + "<br>");
           }
       }
-  
+
       //使用Worker
       let w = new Worker("张三",23,10000);
       w.show();
@@ -1076,13 +1077,13 @@ table.removeChild(tr);
 
 - **类的使用**
 
-  let 对象名 = new 类名(); 对象名.变量名 对象名.方法名() 
+  let 对象名 = new 类名(); 对象名.变量名 对象名.方法名()
 
 - **继承**
 
   让类和类产生子父类关系，提高代码的复用性和维护性。
 
-  子类 extends 父类 
+  子类 extends 父类
 
   Object 顶级父类
 
@@ -1108,7 +1109,7 @@ table.removeChild(tr);
     <title>Number</title>
 </head>
 <body>
-    
+
 </body>
 <script>
     //1. parseFloat()  将传入的字符串浮点数转为浮点数
@@ -1145,22 +1146,22 @@ table.removeChild(tr);
     <title>Math</title>
 </head>
 <body>
-    
+
 </body>
 <script>
     //1. ceil(x) 向上取整
     document.write(Math.ceil(4.4) + "<br>");    // 5
-    
+
     //2. floor(x) 向下取整
     document.write(Math.floor(4.4) + "<br>");   // 4
-    
+
     //3. round(x) 把数四舍五入为最接近的整数
     document.write(Math.round(4.1) + "<br>");   // 4
     document.write(Math.round(4.6) + "<br>");   // 5
-    
+
     //4. random() 随机数,返回的是0.0-1.0之间范围(含头不含尾)
     document.write(Math.random() + "<br>"); // 随机数
-    
+
     //5. pow(x,y) 幂运算 x的y次方
     document.write(Math.pow(2,3) + "<br>"); // 8
 </script>
@@ -1203,7 +1204,7 @@ table.removeChild(tr);
     <title>Date</title>
 </head>
 <body>
-    
+
 </body>
 <script>
     //构造方法
@@ -1268,7 +1269,7 @@ table.removeChild(tr);
     <title>String</title>
 </head>
 <body>
-    
+
 </body>
 <script>
     //1. 构造方法创建字符串对象
@@ -1355,12 +1356,12 @@ table.removeChild(tr);
 .	代表匹配任意字符， 若只是想代表普通数据.  需要使用转义字符来表示\.
 
 X* 	X这个字符可以出现零次或者多次[0-9]*
-X? 	X这个字符可以出现零次或者一次[0-9]? 
+X? 	X这个字符可以出现零次或者一次[0-9]?
 X+ 	X这个字符可以出现一次或者多次 [0-9]+
 
-X{m} 	X这个字符出现次数正好m次  
+X{m} 	X这个字符出现次数正好m次
 X{m, } 	X这个字符出现次数至少m次
-X{m, n} X这个字符出现次数至少m次,最多n次  
+X{m, n} X这个字符出现次数至少m次,最多n次
 (X)+ 	()括号代表X所表示的内容作为一组数据出现；()括号后面的+号，代表这组数据可以出现一次或者多次
 ^X 		^匹配开头
 X$ 		$匹配结尾
@@ -1379,7 +1380,7 @@ X$ 		$匹配结尾
     <title>RegExp</title>
 </head>
 <body>
-    
+
 </body>
 <script>
     //1.验证手机号
@@ -1419,7 +1420,7 @@ X$ 		$匹配结尾
     <title>Array</title>
 </head>
 <body>
-    
+
 </body>
 <script>
 
@@ -1484,7 +1485,7 @@ JavaScript 中的 Set 集合，元素唯一，存取顺序一致。
     <title>Set</title>
 </head>
 <body>
-    
+
 </body>
 <script>
     // Set()   创建集合对象
@@ -1549,7 +1550,7 @@ JavaScript 中的 Map 集合，key 唯一，存取顺序一致。
     <title>Map</title>
 </head>
 <body>
-    
+
 </body>
 <script>
     // Map()   创建Map集合对象
@@ -1607,7 +1608,7 @@ JavaScript 中的 Map 集合，key 唯一，存取顺序一致。
     <title>JSON</title>
 </head>
 <body>
-    
+
 </body>
 <script>
     //定义天气对象
@@ -1690,7 +1691,7 @@ JavaScript 中的 Map 集合，key 唯一，存取顺序一致。
         //5.如果所有条件都不满足，则提交表单
         return true;
     }
-    
+
 </script>
 </html>
 ```
@@ -1698,20 +1699,20 @@ JavaScript 中的 Map 集合，key 唯一，存取顺序一致。
 ### 11.小结
 
 - 内置对象是 JavaScript 提供的带有属性和方法的特殊数据类型。
-- 数字日期 Number Math Date 
-- 字符串 String RegExp 
-- 数组集合 Array Set Map 
+- 数字日期 Number Math Date
+- 字符串 String RegExp
+- 数组集合 Array Set Map
 - 结构化数据 JSON
 
 ## 八.JavaScript BOM
 
 - BOM(Browser Object Model)：浏览器对象模型。
 - 将浏览器的各个组成部分封装成不同的对象，方便我们进行操作。
-- Window：窗口对象 
-- Location：地址栏对象 
-- Navigator：浏览器对象 
-- History：当前窗口历史记录对象 
-- Screen：显示器屏幕对象 
+- Window：窗口对象
+- Location：地址栏对象
+- Navigator：浏览器对象
+- History：当前窗口历史记录对象
+- Screen：显示器屏幕对象
 
 ### 1.Windows窗口对象
 
@@ -1736,17 +1737,17 @@ JavaScript 中的 Map 集合，key 唯一，存取顺序一致。
         function fun(){
             alert("该起床了！");
         }
-    
+
         //设置一次性定时器
         //let d1 = setTimeout("fun()",3000);
         //取消一次性定时器
         //clearTimeout(d1);
-    
+
         //设置循环定时器
         //let d2 = setInterval("fun()",3000);
         //取消循环定时器
         //clearInterval(d2);
-    
+
         //加载事件
         window.onload = function(){
             let div = document.getElementById("div");
@@ -1871,11 +1872,11 @@ img.style.display = "none";
 
 - **BOM(Browser Object Model)：**浏览器对象模型。
 - **将浏览器的各个组成部分封装成不同的对象，方便我们进行操作。**
-  - Window：窗口对象 
-  - Location：地址栏对象 
-  - Navigator：浏览器对象 
-  - History：当前窗口历史记录对象 
-  - Screen：显示器屏幕对象 
+  - Window：窗口对象
+  - Location：地址栏对象
+  - Navigator：浏览器对象
+  - History：当前窗口历史记录对象
+  - Screen：显示器屏幕对象
 - **Window 窗口对象**
   - setTimeout()、clearTimeout()：一次性定时器
   - setInterval()、clearInterval()：循环定时器
@@ -1890,8 +1891,8 @@ img.style.display = "none";
 
 - **获取元素的方法**
 
-  - document.getElementById(id值)：根据 id 值获取元素 
-  - document.getElementsByName(name值)：根据 name 属性值获取元素们 
+  - document.getElementById(id值)：根据 id 值获取元素
+  - document.getElementsByName(name值)：根据 name 属性值获取元素们
   - document.getElementsByTagName(标签名)：根据标签名获取元素们
 
 - **代码实现**
@@ -1912,13 +1913,13 @@ img.style.display = "none";
   <script>
       let div1 = getById("div1");
       alert(div1);
-  
+
       // let div1 = document.getElementById("div1");
       // alert(div1);
-  
+
       // let divs = document.getElementsByName("div2");
       // alert(divs.length);
-  
+
       // let divs2 = document.getElementsByTagName("div");
       // alert(divs2.length);
   </script>
@@ -1931,11 +1932,11 @@ img.style.display = "none";
   function getById(id){
       return document.getElementById(id);
   }
-  
+
   function getByName(name) {
       return document.getElementsByName(name);
   }
-  
+
   function getByTag(tag) {
       return document.getElementsByTagName(tag);
   }
@@ -1943,4 +1944,4 @@ img.style.display = "none";
 
 ------
 
-我们之前的操作都是基于原生 JavaScript 的，比较繁琐。 JQuery 是一个前端框架技术，针对 JavaScript 进行了一系列的封装，使得操作变得非常简单！ 
+我们之前的操作都是基于原生 JavaScript 的，比较繁琐。 JQuery 是一个前端框架技术，针对 JavaScript 进行了一系列的封装，使得操作变得非常简单！

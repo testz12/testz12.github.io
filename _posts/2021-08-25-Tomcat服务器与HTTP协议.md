@@ -1,7 +1,7 @@
 ---
 layout: post
 #标题配置
-title: Tomat服务器与HTTP协议
+title: Tomcat服务器与HTTP协议
 #时间配置
 date:   2021-08-25 22:30:00 +0800
 #目录配置
@@ -9,6 +9,7 @@ categories: JavaWeb
 #标签配置
 tag: 学习笔记
 ---
+Tomcat服务器与HTTP协议
 
 * content
 {:toc}
@@ -95,7 +96,7 @@ Connect 后的port是默认端口号
 ①编辑server.xml配置文件，找到<Host>标签
 ②在</host>前加入
 ```xml
-<Context path="/地址栏访问的路径" docBase="项目路径"> 
+<Context path="/地址栏访问的路径" docBase="项目路径">
 ```
 path属性：访问资源的虚拟目录名称
 docBase属性：项目真实存在的路径
@@ -157,7 +158,7 @@ autoDepioy属性：是否自动发布
   | lf-Modified-Since | 客户端浏览器缓存文件的最后修改时间。                     |
   | Cookie            | 会话管理相关，非常的重要。                               |
 
-  
+
   3.请求空行
    普通换行，用于区分请求头和请求体
   4.请求体

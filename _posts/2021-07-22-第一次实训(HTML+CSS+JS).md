@@ -9,6 +9,7 @@ categories: JavaWeb
 #标签配置
 tag: 学习笔记
 ---
+第一次实训(HTML+CSS+JS)
 
 * content
 {:toc}
@@ -45,7 +46,7 @@ tag: 学习笔记
 # Lesson10-周四（7.22）
 ## 问题解答
 1. 在github上面提交的时候，显示文件数量限制是100
-	分不同的时间多次上传，码云限制的是20个文件 
+	分不同的时间多次上传，码云限制的是20个文件
 2. 后端只能是Java，C++不行
 3. 想找实习必须要会开发项目
 4. 开发界面风格要统一
@@ -222,14 +223,14 @@ var regExp = /^[0-9]{2,6}$/;//正则表达式语法,0-9是只能是数字，2,6�
 
 3. 大数据工程师、爬虫工程师等：JavaScript也是需要掌握
 
-   
+
 ##  三.JavaScript和C语言有关系吗？
 
 1. 没有任何关系。是两种独立的语言。
 
 2. 不同的编程语言，他们的语法有一定的相似度。相似不代表有关系
 
-   
+
 
 ## 四.不同的编程语言的应用场景(领域)
 
@@ -278,8 +279,8 @@ HTML、CSS、JS都是由浏览器执行的
 	-输入网址，敲下回车；浏览器向12306的服务器发出请求
 	-响应：服务器收到浏览器请求后，服务器会把保存在服务器上的网页源码发回给浏览器
 	-浏览器在收到源码后，对源码执行，产生最终的显示效果
-	
-	
+
+
 ## 七.JavaScript学习重要提醒
 
 
@@ -288,7 +289,7 @@ HTML、CSS、JS都是由浏览器执行的
 
 2. 写JS程序一定要细心，一旦写错排错真的比较难（针对初学者）
 
-   
+
 
 ## 八.Chrome的调试
 
@@ -302,7 +303,7 @@ HTML、CSS、JS都是由浏览器执行的
 
 4. 打开控制台，调试JS用console，调试
 
-   
+
 
 ## 九.JavaScript学习重点
 
@@ -329,7 +330,7 @@ HTML、CSS、JS都是由浏览器执行的
 
 4. 独立的js文件中
 
-   
+
 
 ## 十一.JS语法
 
@@ -348,7 +349,7 @@ HTML、CSS、JS都是由浏览器执行的
     5.先理解思路，确定实现步骤
     6.把实现步骤写成代码
 
-  
+
 
 ## 十二.排错（最麻烦，最重要）
 
@@ -358,7 +359,7 @@ HTML、CSS、JS都是由浏览器执行的
 2. 仔细分析自己的代码，看哪里写错了，这个过程可能较长，但我们要经理
 3.多写代码，多出错，累经验
 4.不要放弃
-. 
+.
 
 
 # Lesson5-周五（7.16）
@@ -386,7 +387,7 @@ Java研发工程师、C/C++开发工程师，Web前端开发工程师、信息�
 ```html
 <table class="table table-bordered text-center">
 			<!--表格内容居中，表格佳边框-->
-				<tr class="bg-primary"><!--背景变蓝-->          
+				<tr class="bg-primary"><!--背景变蓝-->
 ```
 ```html
 创建只读文本框
@@ -457,7 +458,7 @@ Java研发工程师、C/C++开发工程师，Web前端开发工程师、信息�
    display: none;/*不显示，隐藏，不保留图片位置
    ```
 
-   
+
 
 2. visibility：隐藏后不释放区域
 
@@ -465,7 +466,7 @@ Java研发工程师、C/C++开发工程师，Web前端开发工程师、信息�
    visibility: hidden;/*隐藏，但保留图片的位置*/
    ```
 
-   
+
 
 ## 二.CSS浮动
 
@@ -510,10 +511,10 @@ Java研发工程师、C/C++开发工程师，Web前端开发工程师、信息�
 Bootstrap CDN方式核心代码
 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
- 
+
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
- 
+
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 ```
@@ -582,7 +583,7 @@ Bootstrap CDN方式核心代码
 
 5. 学会了巧妙利用div来调整网页布局
 
-   
+
 
 ## 一.CSS是什么？
 
@@ -614,7 +615,7 @@ Bootstrap CDN方式核心代码
   			}
   ```
 
-  
+
 
 2. id选择器
     id选择器以#开头
@@ -631,7 +632,7 @@ Bootstrap CDN方式核心代码
   			}
   ```
 
-  
+
 
 3. class选择器
     class选择器：类选择器，可以相同，以.开头
@@ -647,7 +648,7 @@ Bootstrap CDN方式核心代码
   			}
   ```
 
-  
+
 
 
 
@@ -668,11 +669,11 @@ Bootstrap CDN方式核心代码
    			color: red;
    		}
    		</style>
-   		
+
    	</head>
    ```
 
-   
+
 
 2. 行内样式：放在标记的style属性里面（行内样式优先级最高）
 
@@ -682,7 +683,7 @@ Bootstrap CDN方式核心代码
    <p style="color: green;font-size: 20px;">真实的故事</p>
    ```
 
-   
+
 
 3. 外部样式：放在独立的CSS文件中，在网页上用link标记引入
 
@@ -711,7 +712,7 @@ Bootstrap CDN方式核心代码
    background-color:#FF8000 ;
    ```
 
-   
+
 
 2. 文本样式（color）
 
@@ -720,7 +721,7 @@ Bootstrap CDN方式核心代码
   ```html
   .nuc{
   				color: red;
-  			} 
+  			}
   ```
 
   文字对齐方式（text-align）
@@ -745,7 +746,7 @@ Bootstrap CDN方式核心代码
   			}
   ```
 
-  
+
 
   （2）文字删除线（text-decoration：line-through），医用HIS系统
 
@@ -757,7 +758,7 @@ Bootstrap CDN方式核心代码
   			}
   ```
 
-  
+
 
   （3）删除文字下划线（text-decoration：none）用于删除超链接下划线
 
@@ -769,7 +770,7 @@ Bootstrap CDN方式核心代码
   			}
   ```
 
-  
+
 
 3. 字体样式
     (1)字体（font-family）
@@ -784,7 +785,7 @@ Bootstrap CDN方式核心代码
   	</style>
   ```
 
-  
+
 
   (2)字号（font-size）
 
@@ -798,7 +799,7 @@ Bootstrap CDN方式核心代码
   	</style>
   ```
 
-  
+
 
   网页上的文字默认是16px；在工程上网页上的文字一般是12px或14px
 
@@ -815,7 +816,7 @@ Bootstrap CDN方式核心代码
    	</style>
    ```
 
-   
+
 
 5. 表格样式（）
     细线表格，边框折叠（border-collapse：collapse）
@@ -850,14 +851,14 @@ text-align: center;/*表格文字居中*/
 ```
 6. 边框样式
     边框变红（border:1px solid red）
-    
+
     ```html
     #uname{
     				border: 1px solid red;/*边框变红*/
     			}
     ```
-    
-    
+
+
 
   圆角（border-radius）
 
@@ -1014,7 +1015,7 @@ margin-left: 10px;/*左侧外边距*/
 	<li></li>列表项
 ```
 
-​	
+​
 
 有序列表：
 
@@ -1122,7 +1123,7 @@ HTML共六级标题
 
 1. post方式提交表单，表单数据在地址栏不显示，比较安全
    get方式提交表单，数据会显示在地址栏上，不安全
-   
+
 2. post提交数据，数据量大小不限；get一般最大为2K，所以一般采用posy
 
 
@@ -1142,9 +1143,9 @@ HTML共六级标题
 ### 1.自己存在的问题：
 
 	（1）打代码的正确率还有待提升，经常打错字
-	（2）学习后忘记的速度较快，还需多加练习强化记忆	
+	（2）学习后忘记的速度较快，还需多加练习强化记忆
 
-### 2.啥没学会：暂时没有没学会的内容			
+### 2.啥没学会：暂时没有没学会的内容
 
 ### 3.心得体会以及收获：
 	1.了解了32位和64位软件的存储目录分别是Program Files（x86）和Program Files
@@ -1162,7 +1163,7 @@ HTML共六级标题
 		（5）  数据库设计   岗位：DBA
 		（6）  架构设计     岗位：架构师
 		（7）  详细设计     岗位：系统分析师或系统分析员
-		（8）  开发（编程） ***** 
+		（8）  开发（编程） *****
 		（9）  测试  岗位：测试经理、测试工程师、用例工程师
 		（10）部署实施   岗位：实施工程师
 		（11）验收       甲方验收，乙方是软件开发公司
@@ -1178,7 +1179,7 @@ HTML共六级标题
 	8.自我感觉这种边听边练的方法更适合自己，能够提升学习效率，加快学习速度
 
 
-​	
+​
 ## 学习笔记部分：
 
 ## 一、Markdown学习（5W1H学习法）
