@@ -9,8 +9,7 @@ categories: JavaWeb
 #标签配置
 tag: 学习笔记
 ---
-测试一下!
-
+测试
 
 * content
 {:toc}
@@ -266,7 +265,7 @@ tag: 学习笔记
           <div v-if="num % 3 == 0">div1</div>
           <div v-else-if="num % 3 == 1">div2</div>
           <div v-else="num % 3 == 2">div3</div>
-  
+
           <div v-show="flag">div4</div>
       </div>
   </body>
@@ -340,7 +339,7 @@ tag: 学习笔记
           <div>{{name}}</div>
           <button v-on:click="change()">改变div的内容</button>
           <button v-on:dblclick="change()">改变div的内容</button>
-  
+
           <button @click="change()">改变div的内容</button>
       </div>
   </body>
@@ -815,7 +814,7 @@ tag: 学习笔记
                   prop="address"
                   label="地址">
                 </el-table-column>
-  
+
                 <el-table-column
                   label="操作"
                   width="180">
@@ -1158,7 +1157,7 @@ tag: 学习笔记
 
 ### 1.自定义组件
 
-- 学完了 Element 组件后，我们会发现组件其实就是自定义的标签。例如 就是对的封装。 
+- 学完了 Element 组件后，我们会发现组件其实就是自定义的标签。例如 就是对的封装。
 
 - 本质上，组件是带有一个名字且可复用的 Vue 实例，我们完全可以自己定义。
 
@@ -1201,7 +1200,7 @@ tag: 学习笔记
           //解析标签模板
           template:"<button style='color:red'>{{msg}}</button>"
       });
-  
+
       new Vue({
           el:"#div"
       });
@@ -1255,28 +1254,28 @@ tag: 学习笔记
   				beforeCreate: function() {
   					console.group('------beforeCreate创建前状态------');
   					console.log("%c%s", "color:red", "el     : " + this.$el); //undefined
-  					console.log("%c%s", "color:red", "data   : " + this.$data); //undefined 
+  					console.log("%c%s", "color:red", "data   : " + this.$data); //undefined
   					console.log("%c%s", "color:red", "message: " + this.message);//undefined
   				},
   				created: function() {
   					console.group('------created创建完毕状态------');
   					console.log("%c%s", "color:red", "el     : " + this.$el); //undefined
-  					console.log("%c%s", "color:red", "data   : " + this.$data); //已被初始化 
+  					console.log("%c%s", "color:red", "data   : " + this.$data); //已被初始化
   					console.log("%c%s", "color:red", "message: " + this.message); //已被初始化
   				},
   				beforeMount: function() {
   					console.group('------beforeMount挂载前状态------');
   					console.log("%c%s", "color:red", "el     : " + (this.$el)); //已被初始化
   					console.log(this.$el);
-  					console.log("%c%s", "color:red", "data   : " + this.$data); //已被初始化  
-  					console.log("%c%s", "color:red", "message: " + this.message); //已被初始化  
+  					console.log("%c%s", "color:red", "data   : " + this.$data); //已被初始化
+  					console.log("%c%s", "color:red", "message: " + this.message); //已被初始化
   				},
   				mounted: function() {
   					console.group('------mounted 挂载结束状态------');
   					console.log("%c%s", "color:red", "el     : " + this.$el); //已被初始化
   					console.log(this.$el);
   					console.log("%c%s", "color:red", "data   : " + this.$data); //已被初始化
-  					console.log("%c%s", "color:red", "message: " + this.message); //已被初始化 
+  					console.log("%c%s", "color:red", "message: " + this.message); //已被初始化
   				},
   				beforeUpdate: function() {
   					console.group('beforeUpdate 更新前状态===============》');
@@ -1311,12 +1310,12 @@ tag: 学习笔记
   					console.log("%c%s", "color:red", "message: " + this.message);
   				}
   			});
-  
-  		
+
+
   			// 销毁Vue对象
   			//vm.$destroy();
   			//vm.message = "hehe";	// 销毁后 Vue 实例会解绑所有内容
-  
+
   			// 设置data中message数据值
   			vm.message = "good...";
   </script>
@@ -1376,7 +1375,7 @@ tag: 学习笔记
                   //     .catch(error => {
                   //         alert(error);
                   //     })
-  
+
                   // POST方式请求
                   axios.post("testServlet","name="+this.name)
                       .then(resp => {
@@ -1396,7 +1395,7 @@ tag: 学习笔记
 
   ```java
   package com.itheima;
-  
+
   import javax.servlet.ServletException;
   import javax.servlet.annotation.WebServlet;
   import javax.servlet.http.HttpServlet;
@@ -1410,15 +1409,15 @@ tag: 学习笔记
           //设置请求和响应的编码
           req.setCharacterEncoding("UTF-8");
           resp.setContentType("text/html;charset=UTF-8");
-  
+
           //获取请求参数
           String name = req.getParameter("name");
           System.out.println(name);
-  
+
           //响应客户端
           resp.getWriter().write("请求成功");
       }
-  
+
       @Override
       protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
           this.doGet(req,resp);
@@ -1501,11 +1500,11 @@ tag: 学习笔记
 
     ```java
     package com.itheima.controller;
-    
+
     import com.itheima.bean.User;
     import com.itheima.service.UserService;
     import com.itheima.service.impl.UserServiceImpl;
-    
+
     import javax.servlet.ServletException;
     import javax.servlet.annotation.WebServlet;
     import javax.servlet.http.HttpServlet;
@@ -1513,7 +1512,7 @@ tag: 学习笔记
     import javax.servlet.http.HttpServletResponse;
     import java.io.IOException;
     import java.util.List;
-    
+
     @WebServlet("/userServlet")
     public class UserServlet extends HttpServlet {
         private UserService service = new UserServiceImpl();
@@ -1522,17 +1521,17 @@ tag: 学习笔记
             //设置请求和响应编码
             req.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html;charset=UTF-8");
-    
+
             //1.获取请求参数
             String username = req.getParameter("username");
             String password = req.getParameter("password");
-    
+
             //2.封装User对象
             User user = new User(username,password);
-    
+
             //3.调用业务层的登录方法
             List<User> list = service.login(user);
-    
+
             //4.判断是否查询出结果
             if(list.size() != 0) {
                 //将用户名存入会话域当中
@@ -1544,7 +1543,7 @@ tag: 学习笔记
                 resp.getWriter().write("false");
             }
         }
-    
+
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             doGet(req,resp);
@@ -1556,9 +1555,9 @@ tag: 学习笔记
 
     ```java
     package com.itheima.service;
-    
+
     import com.itheima.bean.User;
-    
+
     import java.util.List;
     /*
         业务层约束接口
@@ -1575,7 +1574,7 @@ tag: 学习笔记
 
     ```java
     package com.itheima.service.impl;
-    
+
     import com.itheima.bean.User;
     import com.itheima.mapper.UserMapper;
     import com.itheima.service.UserService;
@@ -1583,11 +1582,11 @@ tag: 学习笔记
     import org.apache.ibatis.session.SqlSession;
     import org.apache.ibatis.session.SqlSessionFactory;
     import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-    
+
     import java.io.IOException;
     import java.io.InputStream;
     import java.util.List;
-    
+
     public class UserServiceImpl implements UserService {
         @Override
         public List<User> login(User user) {
@@ -1597,19 +1596,19 @@ tag: 学习笔记
             try{
                 //1.加载核心配置文件
                 is = Resources.getResourceAsStream("MyBatisConfig.xml");
-    
+
                 //2.获取SqlSession工厂对象
                 SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
-    
+
                 //3.通过SqlSession工厂对象获取SqlSession对象
                 sqlSession = sqlSessionFactory.openSession(true);
-    
+
                 //4.获取UserMapper接口的实现类对象
                 UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-    
+
                 //5.调用实现类对象的登录方法
                 list = mapper.login(user);
-    
+
             }catch (Exception e) {
                 e.printStackTrace();
             } finally {
@@ -1635,12 +1634,12 @@ tag: 学习笔记
 
     ```java
     package com.itheima.mapper;
-    
+
     import com.itheima.bean.User;
     import org.apache.ibatis.annotations.Select;
-    
+
     import java.util.List;
-    
+
     public interface UserMapper {
         /*
             登录方法
@@ -1730,7 +1729,7 @@ tag: 学习笔记
                 showEditStu(row) {
                     //1. 弹出窗口
                     this.dialogTableVisible4edit = true;
-    
+
                     //2. 显示表单数据
                     this.editFormData = {
                         number:row.number,
@@ -1738,7 +1737,7 @@ tag: 学习笔记
                         birthday:row.birthday,
                         address:row.address,
                     }
-                }   
+                }
             },
             mounted(){
                 //调用分页查询功能
@@ -1754,7 +1753,7 @@ tag: 学习笔记
 
     ```java
     package com.itheima.controller;
-    
+
     import com.fasterxml.jackson.databind.ObjectMapper;
     import com.github.pagehelper.Page;
     import com.github.pagehelper.PageInfo;
@@ -1764,7 +1763,7 @@ tag: 学习笔记
     import org.apache.commons.beanutils.BeanUtils;
     import org.apache.commons.beanutils.ConvertUtils;
     import org.apache.commons.beanutils.Converter;
-    
+
     import javax.servlet.ServletException;
     import javax.servlet.annotation.WebServlet;
     import javax.servlet.http.HttpServlet;
@@ -1775,7 +1774,7 @@ tag: 学习笔记
     import java.text.SimpleDateFormat;
     import java.util.Date;
     import java.util.Map;
-    
+
     @WebServlet("/studentServlet")
     public class StudentServlet extends HttpServlet {
         private StudentService service = new StudentServiceImpl();
@@ -1784,7 +1783,7 @@ tag: 学习笔记
             //设置请求和响应编码
             req.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html;charset=UTF-8");
-    
+
             //1.获取方法名
             String method = req.getParameter("method");
             if(method.equals("selectByPage")) {
@@ -1792,7 +1791,7 @@ tag: 学习笔记
                 selectByPage(req,resp);
             }
         }
-    
+
         /*
             分页查询功能
          */
@@ -1800,13 +1799,13 @@ tag: 学习笔记
             //获取请求参数
             String currentPage = req.getParameter("currentPage");
             String pageSize = req.getParameter("pageSize");
-    
+
             //调用业务层的查询方法
             Page page = service.selectByPage(Integer.parseInt(currentPage), Integer.parseInt(pageSize));
-    
+
             //封装PageInfo
             PageInfo info = new PageInfo(page);
-    
+
             //将info转成json，响应给客户端
             try {
                 String json = new ObjectMapper().writeValueAsString(info);
@@ -1815,7 +1814,7 @@ tag: 学习笔记
                 e.printStackTrace();
             }
         }
-    
+
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             doGet(req,resp);
@@ -1827,10 +1826,10 @@ tag: 学习笔记
 
     ```java
     package com.itheima.service;
-    
+
     import com.github.pagehelper.Page;
     import com.itheima.bean.Student;
-    
+
     /*
         学生业务层接口
      */
@@ -1846,7 +1845,7 @@ tag: 学习笔记
 
     ```java
     package com.itheima.service.impl;
-    
+
     import com.github.pagehelper.Page;
     import com.github.pagehelper.PageHelper;
     import com.itheima.bean.Student;
@@ -1856,15 +1855,15 @@ tag: 学习笔记
     import org.apache.ibatis.session.SqlSession;
     import org.apache.ibatis.session.SqlSessionFactory;
     import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-    
+
     import java.io.IOException;
     import java.io.InputStream;
-    
+
     /*
         学生业务层实现类
      */
     public class StudentServiceImpl implements StudentService {
-    
+
         /*
             分页查询功能
          */
@@ -1901,7 +1900,7 @@ tag: 学习笔记
                     }
                 }
             }
-    
+
             //8.返回结果到控制层
             return page;
         }
@@ -1912,15 +1911,15 @@ tag: 学习笔记
 
     ```java
     package com.itheima.mapper;
-    
+
     import com.itheima.bean.Student;
     import org.apache.ibatis.annotations.Delete;
     import org.apache.ibatis.annotations.Insert;
     import org.apache.ibatis.annotations.Select;
     import org.apache.ibatis.annotations.Update;
-    
+
     import java.util.List;
-    
+
     /*
         学生持久层接口
      */
@@ -1931,7 +1930,7 @@ tag: 学习笔记
         @Select("SELECT * FROM student")
         public abstract List<Student> selectAll();
     }
-    
+
     ```
 
 ### 4.添加功能的实现
@@ -1971,14 +1970,14 @@ tag: 学习笔记
     	/*
     	*1、直接复制会报错
     	*2、需要将此行代码需要添加到“doGet”方法中
-    	*3、增加“addStu”方法名的判断	
+    	*3、增加“addStu”方法名的判断
         */
     	else if(method.equals("addStu")) {
                 //添加数据功能
                 addStu(req,resp);
-         }	
+         }
     ==================================================================================
-    
+
     	/*
             添加数据功能
          */
@@ -1987,22 +1986,22 @@ tag: 学习笔记
             Map<String, String[]> map = req.getParameterMap();
             String currentPage = req.getParameter("currentPage");
             String pageSize = req.getParameter("pageSize");
-    
+
             //封装Student对象
             Student stu = new Student();
-    
+
             //注册日期转换器方法
             dateConvert();
-    
+
             try {
                 BeanUtils.populate(stu,map);
             } catch (Exception e) {
                 e.printStackTrace();
             }
-    
+
             //调用业务层的添加方法
             service.addStu(stu);
-    
+
             //重定向到分页查询功能
             try {
                 resp.sendRedirect(req.getContextPath() + "/studentServlet?method=selectByPage&currentPage=" + currentPage + "&pageSize=" + pageSize);
@@ -2010,7 +2009,7 @@ tag: 学习笔记
                 e.printStackTrace();
             }
         }
-    
+
         /*
             日期转换
          */
@@ -2129,22 +2128,22 @@ tag: 学习笔记
             Map<String, String[]> map = req.getParameterMap();
             String currentPage = req.getParameter("currentPage");
             String pageSize = req.getParameter("pageSize");
-    
+
             //封装Student对象
             Student stu = new Student();
-    
+
             //注册日期转换器方法
             dateConvert();
-    
+
             try {
                 BeanUtils.populate(stu,map);
             } catch (Exception e) {
                 e.printStackTrace();
             }
-    
+
             //调用业务层的修改方法
             service.updateStu(stu);
-    
+
             //重定向到分页查询功能
             try {
                 resp.sendRedirect(req.getContextPath() + "/studentServlet?method=selectByPage&currentPage=" + currentPage + "&pageSize=" + pageSize);
@@ -2169,14 +2168,14 @@ tag: 学习笔记
     	/*
     	*1、直接复制会报错
     	*2、需要将此行代码需要添加到“doGet”方法中
-    	*3、增加“updateStu”方法名的判断	
+    	*3、增加“updateStu”方法名的判断
         */
     	else if(method.equals("updateStu")) {
                 //添加数据功能
                 updateStu(req,resp);
-         }	
+         }
     ==================================================================================
-    
+
     /*
             修改数据方法
          */
@@ -2259,15 +2258,15 @@ tag: 学习笔记
     	/*
     	*1、直接复制会报错
     	*2、需要将此行代码需要添加到“doGet”方法中
-    	*3、增加“deleteStu”方法名的判断	
+    	*3、增加“deleteStu”方法名的判断
         */
     	else if(method.equals("deleteStu")) {
                 //添加数据功能
                 deleteStu(req,resp);
-         }	
+         }
     ==================================================================================
-    
-    
+
+
     /*
             删除数据功能
          */
@@ -2276,10 +2275,10 @@ tag: 学习笔记
             String number = req.getParameter("number");
             String currentPage = req.getParameter("currentPage");
             String pageSize = req.getParameter("pageSize");
-    
+
             //调用业务层的删除方法
             service.deleteStu(number);
-    
+
             //重定向到分页查询功能
             try {
                 resp.sendRedirect(req.getContextPath() + "/studentServlet?method=selectByPage&currentPage=" + currentPage + "&pageSize=" + pageSize);
